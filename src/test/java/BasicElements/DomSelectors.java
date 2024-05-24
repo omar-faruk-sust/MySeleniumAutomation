@@ -3,7 +3,6 @@ package BasicElements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.time.Duration;
 
 public class DomSelectors {
@@ -26,10 +25,10 @@ public class DomSelectors {
 
         driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Omar"); //Xpath selector
         driver.findElement(By.cssSelector("input[placeholder='Email']")).sendKeys("omar@gmail.com");
-        driver.findElement(By.xpath("//input[placeholder='text'][2]")).clear(); //Multiple matching that's why we use index
+        driver.findElement(By.xpath("//input[@type='text'][2]")).clear(); //Multiple matching that's why we use index
         driver.findElement(By.cssSelector("input[type='text']:nth-child(3)")).sendKeys("omar@yahoo.com");
-
         driver.findElement(By.xpath("//form/input[3]")).sendKeys("5146906569");
+
         driver.findElement(By.cssSelector(".reset-pwd-btn")).click();
         Thread.sleep(1000);
 
