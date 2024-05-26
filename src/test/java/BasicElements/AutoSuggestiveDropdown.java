@@ -14,10 +14,10 @@ public class AutoSuggestiveDropdown {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 
+        // This will click on auto-suggestion and type ban bangladesh
         driver.findElement(By.id("autosuggest")).sendKeys("ban");
         Thread.sleep(3000);
-        List<WebElement> options = driver.findElements(By.cssSelector("li[class$='ui-menu-item'] a"));
-
+        List<WebElement> options =driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
         for (WebElement option : options) {
             if(option.getText().equalsIgnoreCase("Bangladesh")) {
                 option.click();
