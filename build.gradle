@@ -14,6 +14,9 @@ dependencies {
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.21.0'
     // https://mvnrepository.com/artifact/org.testng/testng
     testImplementation 'org.testng:testng:7.10.2'
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation 'commons-io:commons-io:2.16.1'
+
 }
 
 test {
