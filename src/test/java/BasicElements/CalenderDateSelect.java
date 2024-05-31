@@ -1,27 +1,15 @@
 package BasicElements;
 
 import java.util.List;
-
 import java.util.concurrent.TimeUnit;
-
-
-
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import org.testng.Assert;
 
 public class CalenderDateSelect {
-
-
-
     public static void main(String[] args) {
 
         String monthNumber = "6";
@@ -45,9 +33,7 @@ public class CalenderDateSelect {
         for(int i =0; i<actualList.size();i++)
         {
             System.out.println(actualList.get(i).getAttribute("value"));
-
             Assert.assertEquals(actualList.get(i).getAttribute("value"), expectedList[i]);
-
         }
 
         driver.close();
